@@ -1,0 +1,49 @@
+application {
+  config {
+    baseName organization
+    applicationType microservice
+    packageName ch.agilesolutions.jhipster.organization
+    serviceDiscoveryType no
+    authenticationType jwt
+    prodDatabaseType oracle
+    testFrameworks [cucumber, gatling]
+    cacheProvider no
+    buildTool maven
+    serverPort 8081
+  }
+  entities Department, Employee
+}
+
+/**
+  * ORGANIZATION
+*/
+
+entity Employee {
+  code String required
+    firstName String required
+    lastName String required
+    gender Gender required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+entity Department {
+  code String required
+  name String required
+}
+
+enum Gender {
+    MALE, FEMALE, OTHER
+}
+
+relationship ManyToOne {
+  Employee{department(name) required} to Department
+}
+
+service Employee, Department with serviceClass
+paginate Employee, Department with pagination
+microservice Employee, Department with organization
