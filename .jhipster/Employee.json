@@ -63,7 +63,7 @@
       "otherEntityField": "name"
     }
   ],
-  "changelogDate": "20200611115322",
+  "changelogDate": "20200614114126",
   "javadoc": "ORGANIZATION",
   "entityTableName": "employee",
   "dto": "no",

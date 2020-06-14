@@ -6,7 +6,7 @@ application {
     serviceDiscoveryType no
     authenticationType jwt
     prodDatabaseType oracle
-    testFrameworks [cucumber, gatling]
+    testFrameworks [cucumber]
     cacheProvider no
     buildTool maven
     serverPort 8081

@@ -6,6 +6,14 @@ This is a "microservice" application intended to be part of a microservice archi
 
 This application is configured for Service Discovery and Configuration with . On launch, it will refuse to start if it is not able to connect to .
 
+## generated like through this
+
+```
+jhipster import-jdl app.jdl
+
+jhipster ci-cd
+```
+
 ## Development
 
 To start your application in the dev profile, run:
